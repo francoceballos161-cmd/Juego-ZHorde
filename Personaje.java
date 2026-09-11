@@ -1,3 +1,5 @@
+// clase abstracta, hija de Entidad (extends Entidad)
+// Acá van los modificadores iniciales y habilidades únicas de cada personaje concreto
 public abstract class Personaje extends Entidad {
 
     // Constructor: se ejecuta cuando creas un Personaje nuevo y recibe valores iniciales

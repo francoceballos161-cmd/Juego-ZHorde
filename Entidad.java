@@ -1,3 +1,6 @@
+// Clase base compartida entre Personaje y Monstruo
+//Contiene todo lo que ambos necesitan: vida, stats de combate y posicion en el grid
+
 public abstract class Entidad {
 
     // Atributo: se declara con un modificador de acceso, el tipo de dato y el nombre
@@ -49,4 +52,11 @@ public abstract class Entidad {
     public void setColumna(int nuevaColumna) {
         this.columna = nuevaColumna;
     }
-}    
+    // Resta daño a la vida, pero nunca la deja negativa
+    public void recibirDano(int cantidad) {
+        this.vida = this.vida - cantidad;
+        if (this.vida < 0) {
+            this.vida = 0;
+        }
+    }
+}   
